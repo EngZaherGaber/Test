@@ -1,0 +1,39 @@
+@mixin font-size($size, $line-height: 1.2) {
+    font-size: $size;
+    line-height: $line-height;
+  }
+  
+  @mixin media-query($size) {
+    @media only screen and (max-width: #{$size}px) {
+      @content;
+    }
+  }
+  
+@mixin brdr-rdus{
+    border-radius: 12px;
+}
+@mixin bck-ground($color){
+    background-color: $color;
+}
+@mixin flx($direction,$justify,$align){
+display: flex;
+flex-direction: $direction;
+justify-content: $justify;
+align-items: $align;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }

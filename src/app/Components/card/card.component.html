@@ -1,0 +1,13 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="avatar">
+      <img width="100" height="100" mat-card-avatar [ngSrc]="user.avatar" />
+    </div>
+    <h3>
+      <mat-card-title>{{
+        user.first_name + " " + user.last_name
+      }}</mat-card-title>
+      <mat-card-subtitle>{{ user.id }}</mat-card-subtitle>
+    </h3>
+  </mat-card-header>
+</mat-card>

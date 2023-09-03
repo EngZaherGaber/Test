@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <div class="con">
+    <ng-container *ngIf="user">
+      <mat-card-header>
+        <div mat-card-lg-image class="avatar">
+          <img width="100" height="100" mat-card-avatar [ngSrc]="user.avatar" />
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <h1>{{ user.id }}</h1>
+        <h2>{{ user.first_name + " " + user.last_name }}</h2>
+        <p>{{ user.email }}</p>
+      </mat-card-content>
+    </ng-container>
+    <mat-spinner *ngIf="!user"></mat-spinner>
+  </div>
+  <mat-card-actions>
+    <button mat-fab extended color="primary" (click)="back()">Back</button>
+  </mat-card-actions>
+</mat-card>

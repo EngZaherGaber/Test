@@ -1,0 +1,66 @@
+@use "../../../assets/styles/color" as *;
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px 0px black;
+  background-color: $light-white;
+  color: $dark-blue;
+  max-width: 400px;
+  min-width: 400px;
+  margin: 20vh auto;
+  border-radius: 50px;
+  background-color: $dark-white;
+  box-shadow: inset 0px 0px 5px 1px $dark-blue;
+  .con {
+    position: relative;
+  }
+  mat-card-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 2.5%;
+    padding: 0;
+    position: relative;
+    width: 95%;
+    .mat-mdc-card-avatar,
+    .avatar img {
+      width: 150px;
+      height: 150px;
+      margin: 0;
+    }
+  }
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $dark-blue;
+  }
+  mat-card-actions {
+    //   background-color: $dark-blue;
+    width: 100%;
+    display: grid;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    gap: 1vh;
+    justify-items: center;
+    button {
+      color: $light-white;
+      width: 100%;
+      display: block;
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mat-mdc-card-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+}
+mat-spinner {
+  left: 0%;
+}

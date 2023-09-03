@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <form>
+      <mat-form-field class="search">
+        <mat-label class="search">Search</mat-label>
+        <input
+          class="search"
+          matInput
+          type="number"
+          #search
+          [formControl]="searchInpt"
+          (input)="Search(search.value)"
+        />
+      </mat-form-field>
+    </form>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="con">
+  <ng-container *ngIf="users.length > 0">
+    <div class="users">
+      <app-card [user]="user" *ngFor="let user of users"></app-card>
+    </div>
+  </ng-container>
+  <mat-spinner *ngIf="users.length === 0"></mat-spinner>
+</div>
+<mat-paginator
+  #paginator
+  class="demo-paginator"
+  (page)="handlePageEvent($event)"
+  [pageSize]="per_page"
+  [pageIndex]="page - 1"
+  [length]="length"
+  aria-label="Select page"
+>
+</mat-paginator>
